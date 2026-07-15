@@ -8,7 +8,7 @@ export default function Home() {
 
       <section className="intro">
         <Image
-          src="/headshot.jpg"
+          src="/headshot.JPG"
           alt="Annika Sachdeva"
           width={180}
           height={180}
