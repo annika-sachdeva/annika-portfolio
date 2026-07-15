@@ -22,19 +22,19 @@ export default function Home() {
           <h1>hey, i&apos;m annika!</h1>
 
           <p>
-            I&apos;m a student at MIT studying computer science, artificial
+            i&apos;m a student at MIT studying computer science, artificial
             intelligence, and finance.
           </p>
 
           <p>
-            I&apos;m interested in building technically ambitious products at
-            the intersection of AI, healthcare, entrepreneurship, and human
+            i&apos;m interested in building technically ambitious products at
+            the intersection of AI, healthcare, entrepreneurship, and biotech.
             behavior.
           </p>
 
           <p>
-            Outside of technology, I&apos;m a jazz and R&amp;B
-            singer-songwriter and a member of the MIT Logarhythms.
+            outside of technology, i&apos;m a jazz and r&amp;b
+            singer-songwriter and a member of the MIT Logarhythms acapella group.
           </p>
         </div>
       </section>
