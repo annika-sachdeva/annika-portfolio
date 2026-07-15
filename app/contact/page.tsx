@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 
 export default function ContactPage() {
+  const [showEmail, setShowEmail] = useState(false);
+
   return (
     <main className="container">
       <Navbar />
@@ -17,15 +22,6 @@ export default function ContactPage() {
       </header>
 
       <section className="contactList">
-        <a className="contactCard" href="mailto:asach29@mit.edu">
-          <div>
-            <p className="contactLabel">email</p>
-            <h2>asach29@mit.edu</h2>
-          </div>
-
-          <span>↗</span>
-        </a>
-
         <a
           className="contactCard"
           href="https://www.linkedin.com/in/annikasachdeva"
@@ -34,39 +30,30 @@ export default function ContactPage() {
         >
           <div>
             <p className="contactLabel">linkedin</p>
-            <h2>Annika Sachdeva</h2>
+            <h2>Connect with me on LinkedIn</h2>
           </div>
 
-          <span>↗</span>
+          <span aria-hidden="true">↗</span>
         </a>
 
-        <a
-          className="contactCard"
-          href="/resume.pdf"
-          target="_blank"
-          rel="noreferrer"
+        <button
+          type="button"
+          className="contactCard emailRevealButton"
+          onClick={() => setShowEmail(true)}
+          disabled={showEmail}
         >
           <div>
-            <p className="contactLabel">technical résumé</p>
-            <h2>View résumé</h2>
+            <p className="contactLabel">email</p>
+
+            <h2>
+              {showEmail
+                ? "asach29 [at] mit [dot] edu"
+                : "click to reveal email"}
+            </h2>
           </div>
 
-          <span>↗</span>
-        </a>
-
-        <a
-          className="contactCard"
-          href="/music-resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div>
-            <p className="contactLabel">music résumé</p>
-            <h2>View music résumé</h2>
-          </div>
-
-          <span>↗</span>
-        </a>
+          <span aria-hidden="true">{showEmail ? "✓" : "+"}</span>
+        </button>
       </section>
 
       <footer>© {new Date().getFullYear()} Annika Sachdeva</footer>

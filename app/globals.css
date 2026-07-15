@@ -422,4 +422,18 @@ footer {
   .featuredBlock {
     padding: 22px;
   }
+
+
+
+  .emailRevealButton {
+    width: 100%;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .emailRevealButton:disabled {
+    cursor: default;
+    opacity: 1;
+  }
 }
