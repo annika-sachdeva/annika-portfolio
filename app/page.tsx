@@ -1,65 +1,142 @@
 import Image from "next/image";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <main className="container">
+      <Navbar />
+
+      <section className="intro">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/headshot.jpg"
+          alt="Annika Sachdeva"
+          width={180}
+          height={180}
+          className="headshot"
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+        <div>
+          <h1>hey, i&apos;m annika!</h1>
+
+          <p>
+            I&apos;m a student at MIT studying computer science, artificial
+            intelligence, and finance.
+          </p>
+
+          <p>
+            I&apos;m interested in building technically ambitious products at
+            the intersection of AI, healthcare, entrepreneurship, and human
+            behavior.
+          </p>
+
+          <p>
+            Outside of technology, I&apos;m a jazz and R&amp;B singer-songwriter
+            and a member of the MIT Logarhythms.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="section">
+        <h2>currently</h2>
+
+        <div className="experienceList">
+          <article className="experience">
+            <p className="experienceTitle">
+              Computational Researcher
+              <span>Broad Institute &amp; CSAIL at MIT, Kellis Lab</span>
+            </p>
+
+            <p>
+              Developing multimodal data cartographies, data-ingestion
+              pipelines, and cognitive-mapping workflows for the MantisAI
+              platform.
+            </p>
+          </article>
+
+          <article className="experience">
+            <p className="experienceTitle">
+              Artificial Intelligence Researcher
+              <span>MIT Sloan School of Management</span>
+            </p>
+
+            <p>
+              Building an AI-powered negotiation-skills assessment that models
+              human negotiation dynamics and connects interpersonal behavior to
+              outcomes.
+            </p>
+          </article>
+
+          <article className="experience">
+            <p className="experienceTitle">
+              VC Fellow and AI Intern
+              <span>Link Ventures</span>
+            </p>
+
+            <p>
+              Building AI systems, preparing investment memos, and scouting
+              early technical talent across the MIT ecosystem.
+            </p>
+          </article>
+
+          <article className="experience">
+            <p className="experienceTitle">
+              Machine Learning Engineer
+              <span>Peckish</span>
+            </p>
+
+            <p>
+              Developing computer-vision pipelines that detect and track
+              inventory levels from video feeds for automated stock monitoring.
+            </p>
+          </article>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="section">
+        <h2>building</h2>
+
+        <article className="featuredBlock">
+          <p className="eyebrow">CEO &amp; Co-Founder</p>
+
+          <h3>KineX</h3>
+
+          <p>
+            KineX is an AI-powered physical-therapy app for student athletes.
+            It uses computer vision to help improve mobility and reduce injury
+            and health risks.
+          </p>
+
+          <p>
+            KineX was selected to pitch on the main stage of the ASU+GSV
+            conference in front of more than 7,000 attendees.
+          </p>
+        </article>
+      </section>
+
+      <section className="section">
+        <h2>research interests</h2>
+
+        <ul>
+          <li>Computer vision for medicine and healthcare</li>
+          <li>Multimodal AI and behavioral modeling</li>
+          <li>Human-centered artificial intelligence</li>
+          <li>AI products, startups, and venture capital</li>
+          <li>Technology-enabled healthcare access</li>
+        </ul>
+      </section>
+
+      <section className="section">
+        <h2>elsewhere</h2>
+
+        <p>
+          I&apos;m also Corporate Relations Director for the MIT Sloan Business
+          Club and Social Media and Marketing Director and a section leader for
+          the MIT Logarhythms.
+        </p>
+      </section>
+
+      <footer>© {new Date().getFullYear()} Annika Sachdeva</footer>
+    </main>
   );
 }
