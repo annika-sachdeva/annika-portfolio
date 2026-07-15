@@ -88,9 +88,39 @@ a:hover {
   margin-bottom: 72px;
 }
 
-.headshot {
+.headshotWrapper {
+  position: relative;
   width: 180px;
   height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headshotWrapper::before,
+.headshotWrapper::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.headshotWrapper::before {
+  inset: -8px;
+  border: 2px solid var(--accent);
+}
+
+.headshotWrapper::after {
+  inset: -16px;
+  border: 1px solid var(--accent-light);
+}
+
+.headshot {
+  position: relative;
+  z-index: 1;
+  width: 180px;
+  height: 180px;
+  border: 3px solid var(--background);
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -494,8 +524,14 @@ footer {
 
   .intro {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 30px;
     margin-bottom: 55px;
+  }
+
+  .headshotWrapper {
+    width: 145px;
+    height: 145px;
+    margin-left: 16px;
   }
 
   .headshot {

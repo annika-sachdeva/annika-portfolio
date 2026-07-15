@@ -7,14 +7,16 @@ export default function Home() {
       <Navbar />
 
       <section className="intro">
-        <Image
-          src="/headshot.JPG"
-          alt="Annika Sachdeva"
-          width={180}
-          height={180}
-          className="headshot"
-          priority
-        />
+        <div className="headshotWrapper">
+          <Image
+            src="/headshot.JPG"
+            alt="Annika Sachdeva"
+            width={180}
+            height={180}
+            className="headshot"
+            priority
+          />
+        </div>
 
         <div>
           <h1>hey, i&apos;m annika!</h1>
@@ -31,8 +33,8 @@ export default function Home() {
           </p>
 
           <p>
-            Outside of technology, I&apos;m a jazz and R&amp;B singer-songwriter
-            and a member of the MIT Logarhythms.
+            Outside of technology, I&apos;m a jazz and R&amp;B
+            singer-songwriter and a member of the MIT Logarhythms.
           </p>
         </div>
       </section>
