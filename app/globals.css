@@ -32,6 +32,13 @@ body {
   line-height: 1.65;
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
 a {
   color: var(--accent);
   text-decoration-thickness: 1px;
@@ -250,21 +257,6 @@ li {
   max-width: 720px;
 }
 
-.buttonLink {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  border: 1px solid var(--accent);
-  border-radius: 8px;
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.buttonLink:hover {
-  border-color: var(--accent-light);
-  color: var(--accent-light);
-}
-
 .projectList {
   display: grid;
   gap: 24px;
@@ -413,39 +405,6 @@ li {
   font-style: italic;
 }
 
-.contactList {
-  display: grid;
-  gap: 16px;
-}
-
-.contactCard {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-  padding: 23px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface);
-  color: var(--text);
-  text-decoration: none;
-}
-
-.contactCard h2 {
-  margin-bottom: 0;
-  font-size: 1.3rem;
-}
-
-.contactLabel {
-  margin-bottom: 3px;
-  color: var(--muted);
-  font-family: "Nunito Sans", Arial, sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
 .minimalContact {
   display: flex;
   flex-direction: column;
@@ -459,10 +418,11 @@ li {
   border: 0;
   background: transparent;
   color: var(--heading);
-  font-family: "Courier New", Courier, monospace;
-  font-size: clamp(1.35rem, 4vw, 1.8rem);
+  font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
   font-weight: 400;
-  letter-spacing: 0.03em;
+  line-height: 1.5;
+  letter-spacing: 0;
   cursor: pointer;
   transition:
     color 0.2s ease,
@@ -553,7 +513,7 @@ footer {
   }
 
   .emailTextButton {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .linkedinLogo {

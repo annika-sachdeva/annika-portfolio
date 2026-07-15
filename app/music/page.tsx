@@ -104,15 +104,6 @@ export default function MusicPage() {
           performance, songwriting, Western jazz and pop, and Carnatic music.
           I currently sing with the MIT Logarhythms.
         </p>
-
-        <a
-          className="buttonLink"
-          href="/music-resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          View full music résumé ↗
-        </a>
       </header>
 
       <section className="section">
