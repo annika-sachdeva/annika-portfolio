@@ -3,12 +3,16 @@
 :root {
   --background: #f8f7f3;
   --surface: #ffffff;
-  --surface-soft: #f1efe9;
-  --text: #252421;
-  --muted: #696761;
-  --border: #dcd8cf;
-  --accent: #315c45;
-  --accent-soft: #e7eee9;
+  --surface-soft: #edf2ed;
+
+  --text: #2f513c;
+  --heading: #183827;
+  --muted: #78917f;
+
+  --border: #cad8ce;
+  --accent: #426f52;
+  --accent-light: #93ad9b;
+  --accent-soft: #e2ece5;
 }
 
 * {
@@ -53,7 +57,7 @@ a:hover {
 }
 
 .name {
-  color: var(--text);
+  color: var(--heading);
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.75rem;
   font-style: italic;
@@ -70,6 +74,10 @@ a:hover {
   gap: 18px;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.navLinks a {
+  color: var(--accent);
 }
 
 .intro {
@@ -98,6 +106,7 @@ p {
 h1,
 h2,
 h3 {
+  color: var(--heading);
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 500;
 }
@@ -123,6 +132,7 @@ h3 {
 
 p {
   margin-bottom: 15px;
+  color: var(--text);
 }
 
 ul {
@@ -131,6 +141,7 @@ ul {
 
 li {
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 .section {
@@ -164,6 +175,7 @@ li {
 
 .experienceTitle {
   margin-bottom: 7px;
+  color: var(--heading);
   font-weight: 700;
 }
 
@@ -214,7 +226,13 @@ li {
   padding: 10px 15px;
   border: 1px solid var(--accent);
   border-radius: 8px;
+  color: var(--accent);
   text-decoration: none;
+}
+
+.buttonLink:hover {
+  border-color: var(--accent-light);
+  color: var(--accent-light);
 }
 
 .projectList {
@@ -272,6 +290,7 @@ li {
 
 .projectLink {
   display: inline-block;
+  color: var(--accent);
   font-weight: 700;
 }
 
@@ -336,6 +355,10 @@ li {
 .performanceRow div span {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.performanceRow:hover {
+  color: var(--accent-light);
 }
 
 .timeline {
@@ -405,56 +428,43 @@ li {
   padding: 0;
   border: 0;
   background: transparent;
-  color: var(--text);
+  color: var(--heading);
   font-family: "Courier New", Courier, monospace;
   font-size: clamp(1.35rem, 4vw, 1.8rem);
   font-weight: 400;
   letter-spacing: 0.03em;
   cursor: pointer;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .emailTextButton:hover {
+  color: var(--accent-light);
+  transform: translateY(-1px);
+}
+
+.linkedinLogo {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
   color: var(--accent);
-}
-
-.socialIcons {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.socialIcons a {
-  color: #929292;
   text-decoration: none;
   transition:
     color 0.2s ease,
     transform 0.2s ease;
 }
 
-.socialIcons a:hover {
-  color: var(--accent);
+.linkedinLogo svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.linkedinLogo:hover {
+  color: var(--accent-light);
   opacity: 1;
   transform: translateY(-2px);
-}
-
-.linkedinIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 39px;
-  height: 39px;
-  border-radius: 2px;
-  background: #929292;
-  color: white !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.linkedinIcon:hover {
-  background: var(--accent);
-  color: white !important;
 }
 
 footer {
@@ -508,5 +518,10 @@ footer {
 
   .emailTextButton {
     font-size: 1.2rem;
+  }
+
+  .linkedinLogo {
+    width: 38px;
+    height: 38px;
   }
 }
