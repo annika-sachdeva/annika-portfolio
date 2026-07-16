@@ -114,6 +114,20 @@ export default function Home() {
             conference in front of more than 7,000 attendees.
           </p>
         </article>
+
+        <article className="featuredBlock">
+          <p className="eyebrow">CEO &amp; Co-Founder</p>
+
+          <h3>Stealth</h3>
+
+          <p>
+            Healthtech startup in stealth mode. Building a platform to optimize the clinical backend. 
+          </p>
+          <p>
+            (Coming in late 2026.)
+          </p>
+        </article>
+        
       </section>
 
       <section className="section">
@@ -133,7 +147,7 @@ export default function Home() {
 
         <p>
           I&apos;m also Corporate Relations Director for the MIT Sloan Business
-          Club and Social Media and Marketing Director and a section leader for
+          Club and Event & Concert Coordinator + Social Media Director for
           the MIT Logarhythms.
         </p>
       </section>
