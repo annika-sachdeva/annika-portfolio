@@ -38,8 +38,8 @@ export default function Home() {
 
           <p>
             outside of technology, i&apos;m a jazz and r&amp;b
-            singer-songwriter and a member of the MIT Logarhythms a cappella
-            group.
+            singer-songwriter, a member of the MIT Logarhythms a cappella
+            group, and a bhangra dancer on MIT Mirchi dance team.
           </p>
         </div>
       </section>
