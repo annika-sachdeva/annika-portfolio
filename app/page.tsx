@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 
 const carouselPhotos = Array.from({ length: 24 }, (_, index) => ({
@@ -10,35 +7,6 @@ const carouselPhotos = Array.from({ length: 24 }, (_, index) => ({
 }));
 
 export default function Home() {
-  const [currentPhoto, setCurrentPhoto] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    if (isPaused) {
-      return;
-    }
-
-    const interval = window.setInterval(() => {
-      setCurrentPhoto(
-        (current) => (current + 1) % carouselPhotos.length
-      );
-    }, 4000);
-
-    return () => window.clearInterval(interval);
-  }, [isPaused]);
-
-  const showPreviousPhoto = () => {
-    setCurrentPhoto((current) =>
-      current === 0 ? carouselPhotos.length - 1 : current - 1
-    );
-  };
-
-  const showNextPhoto = () => {
-    setCurrentPhoto(
-      (current) => (current + 1) % carouselPhotos.length
-    );
-  };
-
   return (
     <main className="container">
       <Navbar />
@@ -76,73 +44,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="homeCarouselSection"
-        aria-label="Photo album"
-      >
-        <div
-          className="homeCarousel"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onFocusCapture={() => setIsPaused(true)}
-          onBlurCapture={() => setIsPaused(false)}
-        >
-          <div className="carouselImageFrame">
-            {carouselPhotos.map((photo, index) => (
-              <Image
-                key={photo.src}
-                src={photo.src}
-                alt={photo.alt}
-                width={1200}
-                height={800}
-                className={`homeCarouselImage ${
-                  index === currentPhoto ? "active" : ""
-                }`}
-                priority={index === 0}
-              />
+      <section className="photoMarqueeSection" aria-label="Photo album">
+        <div className="photoMarquee">
+          <div className="photoMarqueeTrack">
+            {[...carouselPhotos, ...carouselPhotos].map((photo, index) => (
+              <div
+                className="photoMarqueeItem"
+                key={`${photo.src}-${index}`}
+                aria-hidden={index >= carouselPhotos.length}
+              >
+                <Image
+                  src={photo.src}
+                  alt={index < carouselPhotos.length ? photo.alt : ""}
+                  width={240}
+                  height={160}
+                  className="photoMarqueeImage"
+                />
+              </div>
             ))}
-
-            <button
-              type="button"
-              className="carouselOverlayArrow carouselOverlayArrowLeft"
-              onClick={showPreviousPhoto}
-              aria-label="Show previous photo"
-            >
-              ‹
-            </button>
-
-            <button
-              type="button"
-              className="carouselOverlayArrow carouselOverlayArrowRight"
-              onClick={showNextPhoto}
-              aria-label="Show next photo"
-            >
-              ›
-            </button>
-          </div>
-
-          <div className="carouselNavigation">
-            <button
-              type="button"
-              className="carouselArrow"
-              onClick={showPreviousPhoto}
-              aria-label="Show previous photo"
-            >
-              ←
-            </button>
-
-            <span className="carouselCounter">
-              {currentPhoto + 1} / {carouselPhotos.length}
-            </span>
-
-            <button
-              type="button"
-              className="carouselArrow"
-              onClick={showNextPhoto}
-              aria-label="Show next photo"
-            >
-              →
-            </button>
           </div>
         </div>
       </section>
