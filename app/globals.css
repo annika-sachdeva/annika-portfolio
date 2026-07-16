@@ -162,7 +162,7 @@ a:hover {
   display: flex;
   width: max-content;
   gap: 14px;
-  animation: photoMarqueeScroll 70s linear infinite;
+  animation: photoMarqueeScroll 100s linear infinite;
   will-change: transform;
 }
 
@@ -708,7 +708,7 @@ main > footer {
 
   .photoMarqueeTrack {
     gap: 10px;
-    animation-duration: 45s;
+    animation-duration: 90s;
   }
 
   .photoMarqueeItem {
