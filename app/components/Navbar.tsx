@@ -9,13 +9,8 @@ export default function Navbar() {
 
       <div className="navLinks">
         <Link href="/projects">ai/ml projects</Link>
-
         <Link href="/music">music</Link>
-
-        <a href="/resume.pdf" target="_blank" rel="noreferrer">
-          resume
-        </a>
-
+        <Link href="/awards">awards &amp; coursework</Link>
         <Link href="/contact">contact</Link>
       </div>
     </nav>
