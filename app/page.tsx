@@ -22,8 +22,8 @@ export default function Home() {
           <h1>hey, i&apos;m annika!</h1>
 
           <p>
-            i&apos;m a student at MIT studying computer science, artificial
-            intelligence, and finance.
+            i&apos;m studying artificial
+            intelligence and computational biology @ MIT.
           </p>
 
           <p>
