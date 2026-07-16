@@ -162,7 +162,7 @@ a:hover {
   display: flex;
   width: max-content;
   gap: 14px;
-  animation: photoMarqueeScroll 55s linear infinite;
+  animation: photoMarqueeScroll 70s linear infinite;
   will-change: transform;
 }
 
