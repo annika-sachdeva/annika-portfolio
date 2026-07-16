@@ -6,21 +6,16 @@ import Navbar from "../components/Navbar";
 const references = [
   {
     quote:
-      "Add a short quotation from a research mentor describing Annika’s intellectual curiosity, technical independence, or research ability.",
-    name: "Mentor Name",
-    role: "Research Mentor · Organization",
+      "add reference.",
+    name: "Odelia Schwartz",
+    role: "Research PI · University of Miami",
   },
+  
   {
     quote:
-      "Add a quotation from a manager describing Annika’s initiative, leadership, reliability, or ability to turn ideas into working products.",
-    name: "Manager Name",
-    role: "Former Manager · Organization",
-  },
-  {
-    quote:
-      "Add a quotation from a founder, professor, or collaborator describing Annika’s creativity, judgment, and ability to work across disciplines.",
-    name: "Reference Name",
-    role: "Title · Organization",
+      "add reference.",
+    name: "Sebastien Pradier",
+    role: "CTO & Co-Founder · Peckish",
   },
 ];
 
