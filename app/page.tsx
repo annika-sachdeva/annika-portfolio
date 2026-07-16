@@ -99,6 +99,19 @@ export default function Home() {
         <h2>building</h2>
 
         <article className="featuredBlock">
+          <p className="eyebrow">CEO &amp; Founder</p>
+
+          <h3>Stealth</h3>
+
+          <p>
+            Healthtech startup in stealth mode, building a platform to optimize the clinical backend. 
+          </p>
+          <p>
+            (coming in late 2026)
+          </p>
+        </article>
+
+        <article className="featuredBlock">
           <p className="eyebrow">CEO &amp; Co-Founder</p>
 
           <h3>KineX</h3>
@@ -112,19 +125,6 @@ export default function Home() {
           <p>
             KineX was selected to pitch on the main stage of the ASU+GSV
             conference in front of more than 7,000 attendees.
-          </p>
-        </article>
-
-        <article className="featuredBlock">
-          <p className="eyebrow">CEO &amp; Co-Founder</p>
-
-          <h3>Stealth</h3>
-
-          <p>
-            Healthtech startup in stealth mode. Building a platform to optimize the clinical backend. 
-          </p>
-          <p>
-            (Coming in late 2026.)
           </p>
         </article>
         
