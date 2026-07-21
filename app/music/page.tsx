@@ -1,5 +1,18 @@
 import Navbar from "../components/Navbar";
 
+const reels = [
+  {
+    title: "MIT Logs: Risk It All Cover",
+    description: "Annika Sachdeva '29 and Raymond Zhang '27",
+    link: "https://www.instagram.com/p/DXUN6ROkVEs/",
+  },
+  {
+    title: "MIT Logs: Eenie Meenie Cover",
+    description: "Annika Sachdeva '29 and Joyce Liu '29",
+    link: "https://www.instagram.com/p/DPWqgvZkUfc/",
+  },
+];
+
 const originalSongs = [
   {
     title: "Tell Me",
@@ -101,10 +114,38 @@ export default function MusicPage() {
 
         <p>
           My background spans eight years of choir, contemporary vocal
-          performance, songwriting, Western jazz and pop, and Carnatic music.
-          I currently sing with the MIT Logarhythms.
+          performance, songwriting, Western jazz and pop, and Carnatic music. I
+          currently sing with the MIT Logarhythms.
         </p>
       </header>
+
+      <section className="section reelsSection">
+        <p className="eyebrow">@mitlogs</p>
+        <h2>MIT Logarhythms</h2>
+
+        <div className="reelGrid">
+          {reels.map((reel, index) => (
+            <a
+              className="reelCard"
+              href={reel.link}
+              target="_blank"
+              rel="noreferrer"
+              key={`${reel.title}-${index}`}
+              aria-label={`${reel.title} on Instagram`}
+            >
+              <div>
+                <p className="reelLabel">Instagram reel</p>
+                <h3>{reel.title}</h3>
+                <p>{reel.description}</p>
+              </div>
+
+              <span className="reelArrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
 
       <section className="section">
         <p className="eyebrow">written, composed &amp; performed by me</p>
@@ -163,8 +204,8 @@ export default function MusicPage() {
             <h3>MIT Logarhythms</h3>
             <p className="timelineDate">2025–present</p>
             <p>
-              Vocalist, section leader, and Event and Concert
-              Coordinator for MIT&apos;s oldest a cappella group.
+              Vocalist, section leader, and Event and Concert Coordinator for
+              MIT&apos;s oldest a cappella group.
             </p>
           </article>
 
@@ -209,8 +250,8 @@ export default function MusicPage() {
             <h3>Carnatic Music</h3>
             <p className="timelineDate">2010–2014</p>
             <p>
-              Began musical training in Indian classical music and performed
-              in temples in Connecticut and New York.
+              Began musical training in Indian classical music and performed in
+              temples in Connecticut and New York.
             </p>
           </article>
         </div>
