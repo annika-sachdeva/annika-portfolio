@@ -66,6 +66,10 @@ export default function Home() {
         </div>
       </section>
 
+
+{/* 
+
+
       <section className="section">
         <h2>currently</h2>
 
@@ -122,11 +126,10 @@ export default function Home() {
             </p>
           </article>
 
-
-
-
         </div>
       </section>
+*/}
+
 
       <section className="section">
         <h2>building</h2>

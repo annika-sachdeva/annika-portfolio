@@ -86,6 +86,18 @@ const projects = [
     mediaType: "image",
     media: "/behavioral.jpg",
   },
+  {
+    title: "Kellis Lab @ MIT CSAIL & Broad Institute",
+    category: "Multimodal Data · Data Analysis",
+    role: "Artificial Intelligence Researcher",
+    description:
+      "Developing multimodal data cartographies, data-ingestion pipelines, and cognitive-mapping workflows for the MantisAI platform.",
+    result:
+      "Collated map flows in full length report, advising student researchers.",
+    tags: ["Multimodal Data", "Data Analysis", "Deep Learning"],
+    mediaType: "image",
+    media: "/csail.jpg",
+  },
 ];
 
 export default function ProjectsPage() {
