@@ -135,7 +135,7 @@ export default function MusicPage() {
               aria-label={`${reel.title} on Instagram`}
             >
               <div>
-                <p className="reelLabel">Instagram reel</p>
+                <p className="reelLabel">\reel</p>
                 <h3>{reel.title}</h3>
                 <p>{reel.description}</p>
               </div>
