@@ -1,15 +1,14 @@
 import Navbar from "../components/Navbar";
 
-
 const reels = [
   {
     title: "MIT Logs: Risk It All Cover",
-    description: "Annika Sachdeva '29 and Raymond Zhang '27",
+    description: "Annika Sachdeva ’29 and Raymond Zhang ’27",
     link: "https://www.instagram.com/p/DXUN6ROkVEs/",
   },
   {
     title: "MIT Logs: Eenie Meenie Cover",
-    description: "Annika Sachdeva '29 and Joyce Liu '29",
+    description: "Annika Sachdeva ’29 and Joyce Liu ’29",
     link: "https://www.instagram.com/p/DPWqgvZkUfc/",
   },
 ];
@@ -125,17 +124,17 @@ export default function MusicPage() {
         <h2>MIT Logarhythms</h2>
 
         <div className="reelGrid">
-          {reels.map((reel, index) => (
+          {reels.map((reel) => (
             <a
               className="reelCard"
               href={reel.link}
               target="_blank"
               rel="noreferrer"
-              key={`${reel.title}-${index}`}
+              key={reel.title}
               aria-label={`${reel.title} on Instagram`}
             >
-              <div>
-                <p className="reelLabel">\reel</p>
+              <div className="reelCardText">
+                <p className="reelLabel">Instagram reel</p>
                 <h3>{reel.title}</h3>
                 <p>{reel.description}</p>
               </div>
