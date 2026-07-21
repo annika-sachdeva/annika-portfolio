@@ -163,8 +163,8 @@ export default function MusicPage() {
             <h3>MIT Logarhythms</h3>
             <p className="timelineDate">2025–present</p>
             <p>
-              Vocalist, section leader, and Social Media and Marketing
-              Director for MIT&apos;s oldest a cappella group.
+              Vocalist, section leader, and Event and Concert
+              Coordinator for MIT&apos;s oldest a cappella group.
             </p>
           </article>
 
