@@ -6,6 +6,12 @@ const carouselPhotos = Array.from({ length: 24 }, (_, index) => ({
   alt: `Annika Sachdeva photo ${index + 1}`,
 }));
 
+
+
+
+
+
+
 export default function Home() {
   return (
     <main className="container">
@@ -65,6 +71,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
 
 {/* 
@@ -167,27 +174,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
-        <h2>research interests</h2>
+      <div className="homeTwoColumn">
+        <section className="section">
+          <h2>research interests</h2>
 
-        <ul>
-          <li>Computer vision for medicine and healthcare</li>
-          <li>Multimodal AI and behavioral modeling</li>
-          <li>Human-centered artificial intelligence</li>
-          <li>AI products, startups, and venture capital</li>
-          <li>Technology-enabled healthcare access</li>
-        </ul>
-      </section>
+          <ul>
+            <li>Computer vision for medicine and healthcare</li>
+            <li>Multimodal AI and behavioral modeling</li>
+            <li>Human-centered artificial intelligence</li>
+            <li>AI products, startups, and venture capital</li>
+            <li>Technology-enabled healthcare access</li>
+          </ul>
+        </section>
 
-      <section className="section">
-        <h2>elsewhere</h2>
+        <section className="section">
+          <h2>elsewhere</h2>
 
-        <p>
-          I&apos;m also Corporate Relations Director for the MIT Sloan Business
-          Club and Event &amp; Concert Coordinator + Social Media Director for
-          the MIT Logarhythms.
-        </p>
-      </section>
+          <p>
+            I&apos;m also Corporate Relations Director for the MIT Sloan
+            Business Club and Event &amp; Concert Coordinator + Social Media
+            Director for the MIT Logarhythms.
+          </p>
+        </section>
+      </div>
 
       <footer>© {new Date().getFullYear()} Annika Sachdeva</footer>
     </main>
