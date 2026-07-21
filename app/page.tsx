@@ -70,6 +70,32 @@ export default function Home() {
         <h2>currently</h2>
 
         <div className="experienceList">
+
+          <article className="experience">
+            <p className="experienceTitle">
+              Machine Learning Engineer
+              <span>Peckish</span>
+            </p>
+
+            <p>
+              Developing computer-vision pipelines that detect and track
+              inventory levels from video feeds for automated stock monitoring.
+            </p>
+          </article>
+
+
+          <article className="experience">
+            <p className="experienceTitle">
+              VC Fellow and AI Intern
+              <span>Link Ventures</span>
+            </p>
+
+            <p>
+              Building AI systems, preparing investment memos, and scouting
+              early technical talent across the MIT ecosystem.
+            </p>
+          </article>
+
           <article className="experience">
             <p className="experienceTitle">
               Computational Researcher
@@ -96,29 +122,9 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="experience">
-            <p className="experienceTitle">
-              VC Fellow and AI Intern
-              <span>Link Ventures</span>
-            </p>
 
-            <p>
-              Building AI systems, preparing investment memos, and scouting
-              early technical talent across the MIT ecosystem.
-            </p>
-          </article>
 
-          <article className="experience">
-            <p className="experienceTitle">
-              Machine Learning Engineer
-              <span>Peckish</span>
-            </p>
 
-            <p>
-              Developing computer-vision pipelines that detect and track
-              inventory levels from video feeds for automated stock monitoring.
-            </p>
-          </article>
         </div>
       </section>
 
