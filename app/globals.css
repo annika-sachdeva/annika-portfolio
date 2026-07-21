@@ -146,7 +146,6 @@ a:hover {
   width: 100%;
   overflow: hidden;
   padding: 8px 0;
-
   mask-image: linear-gradient(
     to right,
     transparent,
@@ -154,7 +153,6 @@ a:hover {
     black 93%,
     transparent
   );
-
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
@@ -219,7 +217,7 @@ a:hover {
   }
 }
 
-/* General typography */
+/* Typography */
 
 h1,
 h2,
@@ -284,7 +282,7 @@ li {
   text-transform: uppercase;
 }
 
-/* Homepage building section */
+/* Homepage building */
 
 .featuredBlockList {
   display: grid;
@@ -307,7 +305,7 @@ li {
   margin-bottom: 0;
 }
 
-/* Homepage two-column section */
+/* Homepage two columns */
 
 .homeTwoColumn {
   display: grid;
@@ -343,7 +341,7 @@ li {
   max-width: 720px;
 }
 
-/* Experience styles */
+/* Experience */
 
 .experienceList {
   display: grid;
@@ -492,10 +490,48 @@ li {
   font-weight: 600;
 }
 
-.projectLink {
-  display: inline-block;
-  color: var(--accent);
+.projectLinks {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.projectArrowLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 13px 0;
+  border-top: 1px solid var(--border);
+  color: var(--heading);
   font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.projectArrowLink:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.projectArrowLink:hover {
+  padding-left: 5px;
+  color: var(--accent-light);
+  opacity: 1;
+}
+
+.projectBigArrow {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.projectArrowLink:hover .projectBigArrow {
+  transform: translate(3px, -3px);
 }
 
 /* Music page */
@@ -749,7 +785,7 @@ li {
   transform: translateY(-2px);
 }
 
-/* Awards page */
+/* Awards */
 
 .awardsList {
   display: grid;
@@ -955,6 +991,10 @@ main > footer {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+
+  .projectBigArrow {
+    font-size: 1.7rem;
   }
 
   .musicGrid {

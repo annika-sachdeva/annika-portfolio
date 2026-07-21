@@ -1,7 +1,24 @@
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 
-const projects = [
+type ProjectLink = {
+  label: string;
+  url: string;
+};
+
+type Project = {
+  title: string;
+  category: string;
+  role: string;
+  description: string;
+  result: string;
+  tags: string[];
+  mediaType: "image" | "video";
+  media: string;
+  links: ProjectLink[];
+};
+
+const projects: Project[] = [
   {
     title: "KineX",
     category: "Healthcare · Computer Vision",
@@ -13,6 +30,12 @@ const projects = [
     tags: ["Computer Vision", "Healthcare", "Product", "Python"],
     mediaType: "video",
     media: "/Kinex.mp4",
+    links: [
+      {
+        label: "View KineX on GitHub",
+        url: "https://github.com/annika-sachdeva/kinexCODE",
+      },
+    ],
   },
   {
     title: "Peckish",
@@ -25,6 +48,7 @@ const projects = [
     tags: ["OWLv2", "Object Tracking", "PyTorch", "Python"],
     mediaType: "image",
     media: "/peckish.jpg",
+    links: [],
   },
   {
     title: "Pancreatic Cancer Imaging Research",
@@ -37,6 +61,16 @@ const projects = [
     tags: ["Vision Transformers", "Medical Imaging", "Deep Learning"],
     mediaType: "image",
     media: "/pancreatic.jpg",
+    links: [
+      {
+        label: "View Regeneron STS recognition",
+        url: "https://www.societyforscience.org/regeneron-sts/2025-scholars/",
+      },
+      {
+        label: "View research presentation",
+        url: "https://docs.google.com/presentation/d/1dHf-Gm8b6g2M_TnWNMYhcZyPsn8ykyRH/edit?slide=id.p1#slide=id.p1",
+      },
+    ],
   },
   {
     title: "Brain MRI Classification System",
@@ -49,6 +83,12 @@ const projects = [
     tags: ["MRI", "DenseNet", "Healthcare AI", "Classification"],
     mediaType: "image",
     media: "/brain.jpg",
+    links: [
+      {
+        label: "View IEEE publication",
+        url: "https://ieeexplore.ieee.org/document/10461821/authors#authors",
+      },
+    ],
   },
   {
     title: "Mars Landing-Site Research",
@@ -61,6 +101,12 @@ const projects = [
     tags: ["NASA", "Planetary Science", "Geospatial Analysis"],
     mediaType: "image",
     media: "/mars.jpg",
+    links: [
+      {
+        label: "View NASA publication",
+        url: "https://ntrs.nasa.gov/citations/20230011739",
+      },
+    ],
   },
   {
     title: "AI Negotiation Assessment",
@@ -73,6 +119,7 @@ const projects = [
     tags: ["Behavioral AI", "Multimodal AI", "Human-Centered AI"],
     mediaType: "image",
     media: "/sloan.jpg",
+    links: [],
   },
   {
     title: "Behavioral Signals",
@@ -85,6 +132,7 @@ const projects = [
     tags: ["Speech AI", "Behavioral Analytics", "Machine Learning"],
     mediaType: "image",
     media: "/behavioral.jpg",
+    links: [],
   },
   {
     title: "Kellis Lab @ MIT CSAIL & Broad Institute",
@@ -97,6 +145,7 @@ const projects = [
     tags: ["Multimodal Data", "Data Analysis", "Deep Learning"],
     mediaType: "image",
     media: "/csail.jpg",
+    links: [],
   },
 ];
 
@@ -118,7 +167,10 @@ export default function ProjectsPage() {
 
       <section className="projectList">
         {projects.map((project) => (
-          <article className="projectCard projectCardWithMedia" key={project.title}>
+          <article
+            className="projectCard projectCardWithMedia"
+            key={project.title}
+          >
             <div className="projectText">
               <p className="projectCategory">{project.category}</p>
 
@@ -137,6 +189,26 @@ export default function ProjectsPage() {
                   </span>
                 ))}
               </div>
+
+              {project.links.length > 0 && (
+                <div className="projectLinks">
+                  {project.links.map((link) => (
+                    <a
+                      className="projectArrowLink"
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={link.url}
+                    >
+                      <span>{link.label}</span>
+
+                      <span className="projectBigArrow" aria-hidden="true">
+                        ↗
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div
@@ -157,7 +229,6 @@ export default function ProjectsPage() {
                   aria-label={`${project.title} demonstration`}
                 >
                   <source src={project.media} type="video/mp4" />
-
                   Your browser does not support embedded video.
                 </video>
               ) : (
