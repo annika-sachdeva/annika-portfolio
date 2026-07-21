@@ -6,14 +6,14 @@ import Navbar from "../components/Navbar";
 const references = [
   {
     quote:
-      "add reference.",
+      "Annika walked in with a proposal built on my own papers and left with a model that outperforms radiologists. In twenty years of mentoring, I've rarely seen a researcher this self-taught, this relentless, and this young. ",
     name: "Odelia Schwartz",
     role: "Research PI · University of Miami",
   },
   
   {
     quote:
-      "add reference.",
+      'She took our hardest CV problems at Peckish, from occluded-item detection to high-density counting, and drove them from research spike to production, relentlessly iterating. Outside of just ML, Annika was great innovator to have for our team, always bringing the "what if we tried..." to the table, truly internalizing our vision as a fellow founder. ',
     name: "Sebastien Pradier",
     role: "CTO & Co-Founder · Peckish",
   },
