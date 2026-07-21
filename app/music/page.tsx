@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 
+
 const reels = [
   {
     title: "MIT Logs: Risk It All Cover",

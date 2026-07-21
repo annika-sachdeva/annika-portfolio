@@ -1,99 +1,90 @@
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 
 const projects = [
   {
-    category: "healthcare ai · computer vision",
     title: "KineX",
+    category: "Healthcare · Computer Vision",
     role: "CEO & Co-Founder",
     description:
-      "Built an AI-powered physical-therapy application for student athletes. KineX uses computer vision to evaluate movement, improve mobility, and reduce injury and health risks.",
+      "An AI-powered physical-therapy platform for student athletes that uses computer vision to improve mobility and reduce injury risk.",
     result:
-      "Selected to pitch on the ASU+GSV main stage in front of more than 7,000 attendees.",
-    technologies: ["Computer Vision", "AI", "Healthcare", "Product"],
+      "Selected to pitch on the main stage of the ASU+GSV conference in front of more than 7,000 attendees.",
+    tags: ["Computer Vision", "Healthcare", "Product", "Python"],
+    mediaType: "video",
+    media: "/Kinex.mp4",
   },
   {
-    category: "medical ai research",
-    title: "Early Pancreatic Cancer Detection",
-    role: "Machine Learning Researcher · University of Miami Brain & AI Lab",
+    title: "Peckish",
+    category: "Computer Vision · Inventory Intelligence",
+    role: "Machine Learning Engineer",
     description:
-      "Developed a novel weighted-normalization method with Dr. Odelia Schwartz and applied it to early pancreatic-cancer detection and biomarker discovery.",
+      "Developed video-based computer-vision pipelines for detecting, tracking, and counting high-density inventory.",
     result:
-      "Achieved 94% accuracy and received recognition through IFoRE, Davidson Fellows, and Regeneron STS.",
-    technologies: [
-      "PyTorch",
-      "Computer Vision",
-      "Weighted Normalization",
-      "DINOv2",
-    ],
-    link: "https://docs.google.com/presentation/d/1dHf-Gm8b6g2M_TnWNMYhcZyPsn8ykyRH/edit?usp=sharing&ouid=106700581379104332488&rtpof=true&sd=true",
-    linkLabel: "View research poster",
+      "Built workflows focused on accurate item counting and preventing duplicate detections across video frames.",
+    tags: ["OWLv2", "Object Tracking", "PyTorch", "Python"],
+    mediaType: "image",
+    media: "/peckish.jpg",
   },
   {
-    category: "planetary science · machine learning",
-    title: "Mars Rover Resource Analysis",
-    role: "Team Lead & Machine Learning Intern · NASA",
+    title: "Pancreatic Cancer Imaging Research",
+    category: "Medical Imaging · Deep Learning",
+    role: "Researcher",
     description:
-      "Analyzed mineral presence in the northern latitudes of Mars using JMARS to identify evidence relevant to past life and rover-resource utilization.",
+      "Developed a visual-transformer architecture using weighted normalization for medical-image classification.",
     result:
-      "Led mineral-search optimization and served as first author on the resulting publication.",
-    technologies: [
-      "Machine Learning",
-      "JMARS",
-      "Planetary Science",
-      "Data Analysis",
-    ],
-    link: "https://ntrs.nasa.gov/citations/20230011739",
-    linkLabel: "View NASA publication",
+      "The research was recognized through the Regeneron Science Talent Search and Davidson Fellows Scholarship.",
+    tags: ["Vision Transformers", "Medical Imaging", "Deep Learning"],
+    mediaType: "image",
+    media: "/pancreatic.jpg",
   },
   {
-    category: "medical imaging",
-    title: "Brain Tumor MRI Classification",
-    role: "Machine Learning Researcher & First Author · Florida Atlantic University",
+    title: "Brain MRI Classification System",
+    category: "Healthcare AI · Medical Imaging",
+    role: "Machine Learning Researcher",
     description:
-      "Constructed a convolutional neural network using DenseNet201 to classify MRI images and distinguish white matter in brain-tumor diagnosis.",
-    result: "Reached 92% accuracy and published the work through IEEE.",
-    technologies: ["CNN", "DenseNet201", "MRI", "TensorFlow"],
-    link: "https://ieeexplore.ieee.org/document/10461821",
-    linkLabel: "View IEEE publication",
+      "Designed an end-to-end workflow for processing brain MRI scans and generating machine-learning classification reports.",
+    result:
+      "Created a system architecture covering patient-data handling, image verification, model inference, and report generation.",
+    tags: ["MRI", "DenseNet", "Healthcare AI", "Classification"],
+    mediaType: "image",
+    media: "/brain.jpg",
   },
   {
-    category: "multimodal ai",
-    title: "Negotiation Skills Assessment",
-    role: "Artificial Intelligence Researcher · MIT Sloan",
+    title: "Mars Landing-Site Research",
+    category: "Planetary Science · Data Analysis",
+    role: "NASA Researcher",
     description:
-      "Built an AI-powered negotiation assessment that integrates multimodal behavioral signals to model human interaction and connect interpersonal cues to negotiation outcomes.",
-    technologies: [
-      "Multimodal AI",
-      "Behavioral Modeling",
-      "Audio Processing",
-      "Machine Learning",
-    ],
+      "Analyzed potential Mars landing trajectories and scientific targets using geographic and mission-planning data.",
+    result:
+      "Mapped traverses between candidate landing points and high-value geological regions.",
+    tags: ["NASA", "Planetary Science", "Geospatial Analysis"],
+    mediaType: "image",
+    media: "/mars.jpg",
   },
   {
-    category: "computer vision · retail",
-    title: "Automated Inventory Monitoring",
-    role: "Machine Learning Engineer · Peckish",
+    title: "AI Negotiation Assessment",
+    category: "Behavioral AI · Human-Centered AI",
+    role: "Artificial Intelligence Researcher",
     description:
-      "Developing computer-vision pipelines that detect and track product inventory from video feeds, enabling automated stock monitoring.",
-    technologies: [
-      "Computer Vision",
-      "Object Tracking",
-      "Video Processing",
-      "Python",
-    ],
+      "Building an AI-powered negotiation-skills assessment that models human negotiation dynamics and interpersonal behavior.",
+    result:
+      "Connects behavioral signals and negotiation patterns to performance outcomes.",
+    tags: ["Behavioral AI", "Multimodal AI", "Human-Centered AI"],
+    mediaType: "image",
+    media: "/sloan.jpg",
   },
   {
-    category: "audio ai",
-    title: "Tonal Stress Detection",
-    role: "Machine Learning Intern · Behavioral Signals",
+    title: "Behavioral Signals",
+    category: "Speech AI · Behavioral Analytics",
+    role: "Machine Learning Intern",
     description:
-      "Developed a tonal-stress detection model using an audio-processing API for applications in medicine and customer service.",
-    technologies: [
-      "Audio Processing",
-      "Speech AI",
-      "Behavioral Signals",
-      "Python",
-    ],
+      "Worked on machine-learning systems that analyze speech and behavioral signals from human interaction.",
+    result:
+      "Contributed to applied AI workflows for extracting meaningful behavioral information from conversational data.",
+    tags: ["Speech AI", "Behavioral Analytics", "Machine Learning"],
+    mediaType: "image",
+    media: "/behavioral.jpg",
   },
 ];
 
@@ -104,11 +95,12 @@ export default function ProjectsPage() {
 
       <header className="pageHeader">
         <p className="eyebrow">selected work</p>
+
         <h1>ai/ml projects</h1>
 
         <p>
-          Research and products across medical AI, computer vision, multimodal
-          behavior modeling, audio intelligence, and planetary science.
+          A selection of projects across artificial intelligence, computer
+          vision, healthcare, behavioral modeling, and scientific research.
         </p>
       </header>
 
@@ -121,32 +113,42 @@ export default function ProjectsPage() {
 
             <p className="projectRole">{project.role}</p>
 
+            <div className="projectMedia">
+              {project.mediaType === "video" ? (
+                <video
+                  className="projectVideo"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={`${project.title} demonstration`}
+                >
+                  <source src={project.media} type="video/mp4" />
+                  Your browser does not support embedded video.
+                </video>
+              ) : (
+                <Image
+                  src={project.media}
+                  alt={`${project.title} project visual`}
+                  width={1000}
+                  height={650}
+                  className="projectImage"
+                />
+              )}
+            </div>
+
             <p>{project.description}</p>
 
-            {project.result && (
-              <p className="projectResult">
-                <strong>Outcome:</strong> {project.result}
-              </p>
-            )}
+            <p className="projectResult">{project.result}</p>
 
             <div className="tagList">
-              {project.technologies.map((technology) => (
-                <span className="tag" key={technology}>
-                  {technology}
+              {project.tags.map((tag) => (
+                <span className="tag" key={tag}>
+                  {tag}
                 </span>
               ))}
             </div>
-
-            {project.link && (
-              <a
-                className="projectLink"
-                href={project.link}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {project.linkLabel} ↗
-              </a>
-            )}
           </article>
         ))}
       </section>
