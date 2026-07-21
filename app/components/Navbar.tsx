@@ -10,7 +10,7 @@ export default function Navbar() {
       <div className="navLinks">
         <Link href="/projects">ai/ml projects</Link>
         <Link href="/music">music</Link>
-        <Link href="/awards">awards &amp; coursework</Link>
+        {/* <Link href="/awards">awards</Link> */}
         <Link href="/contact">contact</Link>
       </div>
     </nav>
