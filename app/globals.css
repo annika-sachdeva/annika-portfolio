@@ -48,7 +48,7 @@ a:hover {
 }
 
 .container {
-  width: min(780px, calc(100% - 44px));
+  width: min(900px, calc(100% - 44px));
   margin: 0 auto;
   padding: 42px 0 64px;
 }
@@ -342,6 +342,8 @@ li {
   max-width: 720px;
 }
 
+/* AI/ML projects */
+
 .projectList {
   display: grid;
   gap: 24px;
@@ -354,39 +356,15 @@ li {
   background: var(--surface);
 }
 
-
-.projectMedia {
-  width: 100%;
-  margin: 20px 0 22px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface-soft);
+.projectCardWithMedia {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  align-items: center;
+  gap: 30px;
 }
 
-.projectImage,
-.projectVideo {
-  display: block;
-  width: 100%;
-  height: 320px;
-  object-position: center;
-  transition: transform 0.25s ease;
-}
-
-.projectImage {
-  padding: 10px;
-  background: white;
-  object-fit: contain;
-}
-
-.projectVideo {
-  background: #000;
-  object-fit: cover;
-}
-
-.projectCard:hover .projectImage,
-.projectCard:hover .projectVideo {
-  transform: scale(1.01);
+.projectText {
+  min-width: 0;
 }
 
 .projectCard h2 {
@@ -413,11 +391,59 @@ li {
   color: var(--muted);
 }
 
+.projectMedia {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+}
+
+.projectMediaImage {
+  min-height: 190px;
+  max-height: 340px;
+}
+
+.projectMediaVideo {
+  height: 410px;
+  background: #000;
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  padding: 10px;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.25s ease;
+}
+
+.projectVideo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #000;
+  transition: transform 0.25s ease;
+}
+
+.projectCardWithMedia:hover .projectImage,
+.projectCardWithMedia:hover .projectVideo {
+  transform: scale(1.01);
+}
+
 .tagList {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 21px 0;
+  margin: 21px 0 0;
 }
 
 .tag {
@@ -435,6 +461,8 @@ li {
   color: var(--accent);
   font-weight: 700;
 }
+
+/* Music page */
 
 .musicGrid {
   display: grid;
@@ -523,6 +551,62 @@ li {
   color: var(--accent);
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.reelsSection {
+  margin-top: -10px;
+}
+
+.reelGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.reelCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 170px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface-soft);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.reelCard:hover {
+  border-color: var(--accent-light);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.reelCard h3 {
+  margin-bottom: 8px;
+}
+
+.reelCard p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.reelLabel {
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.reelArrow {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 1.3rem;
 }
 
 /* Contact page */
@@ -705,7 +789,7 @@ main > footer {
 
 @media (max-width: 720px) {
   .container {
-    width: min(100% - 30px, 780px);
+    width: min(100% - 30px, 900px);
     padding-top: 28px;
   }
 
@@ -752,6 +836,38 @@ main > footer {
     border-radius: 8px;
   }
 
+  .projectCardWithMedia {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .projectMedia {
+    width: 100%;
+  }
+
+  .projectMediaImage {
+    min-height: 180px;
+    max-height: none;
+  }
+
+  .projectMediaVideo {
+    width: min(100%, 320px);
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .projectImage {
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+  }
+
+  .projectVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
   .musicGrid {
     grid-template-columns: 1fr;
   }
@@ -760,10 +876,13 @@ main > footer {
     min-height: auto;
   }
 
+  .reelGrid {
+    grid-template-columns: 1fr;
+  }
 
-  .projectImage,
-  .projectVideo {
-    height: 220px;
+  .reelCard {
+    min-height: auto;
+    padding: 21px;
   }
 
   .projectCard,
@@ -794,6 +913,4 @@ main > footer {
     width: 38px;
     height: 38px;
   }
-
-
 }

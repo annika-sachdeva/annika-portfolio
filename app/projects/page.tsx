@@ -106,14 +106,34 @@ export default function ProjectsPage() {
 
       <section className="projectList">
         {projects.map((project) => (
-          <article className="projectCard" key={project.title}>
-            <p className="projectCategory">{project.category}</p>
+          <article className="projectCard projectCardWithMedia" key={project.title}>
+            <div className="projectText">
+              <p className="projectCategory">{project.category}</p>
 
-            <h2>{project.title}</h2>
+              <h2>{project.title}</h2>
 
-            <p className="projectRole">{project.role}</p>
+              <p className="projectRole">{project.role}</p>
 
-            <div className="projectMedia">
+              <p>{project.description}</p>
+
+              <p className="projectResult">{project.result}</p>
+
+              <div className="tagList">
+                {project.tags.map((tag) => (
+                  <span className="tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div
+              className={
+                project.mediaType === "video"
+                  ? "projectMedia projectMediaVideo"
+                  : "projectMedia projectMediaImage"
+              }
+            >
               {project.mediaType === "video" ? (
                 <video
                   className="projectVideo"
@@ -125,6 +145,7 @@ export default function ProjectsPage() {
                   aria-label={`${project.title} demonstration`}
                 >
                   <source src={project.media} type="video/mp4" />
+
                   Your browser does not support embedded video.
                 </video>
               ) : (
@@ -132,22 +153,11 @@ export default function ProjectsPage() {
                   src={project.media}
                   alt={`${project.title} project visual`}
                   width={1000}
-                  height={650}
+                  height={700}
+                  sizes="(max-width: 720px) 100vw, 300px"
                   className="projectImage"
                 />
               )}
-            </div>
-
-            <p>{project.description}</p>
-
-            <p className="projectResult">{project.result}</p>
-
-            <div className="tagList">
-              {project.tags.map((tag) => (
-                <span className="tag" key={tag}>
-                  {tag}
-                </span>
-              ))}
             </div>
           </article>
         ))}
