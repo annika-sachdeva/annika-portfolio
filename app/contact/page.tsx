@@ -46,8 +46,8 @@ export default function ContactPage() {
           aria-expanded={showEmail}
         >
           {showEmail
-            ? "[asach29 [at] mit [dot] edu]"
-            : "[click to reveal email]"}
+            ? "[]"
+            : "[]"}
         </button>
 
         <div className="socialLinks">
